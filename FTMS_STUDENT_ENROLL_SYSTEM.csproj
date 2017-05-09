@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79005041-8C12-43B8-9AB5-87084AB3E854}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FTMS_STUDENT_ENROLL_SYSTEM</RootNamespace>
+    <AssemblyName>FTMS_STUDENT_ENROLL_SYSTEM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\DataAccessLayer.cs" />
+    <Compile Include="DB\DataProcessLayer.cs" />
+    <Compile Include="UI\FRMLOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FRMLOGIN.Designer.cs">
+      <DependentUpon>FRMLOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmStudentAdmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmStudentAdmission.Designer.cs">
+      <DependentUpon>FrmStudentAdmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmStudentEnrolment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmStudentEnrolment.Designer.cs">
+      <DependentUpon>FrmStudentEnrolment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmStudentInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmStudentInformation.Designer.cs">
+      <DependentUpon>FrmStudentInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmStudentRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmStudentRegistration.Designer.cs">
+      <DependentUpon>FrmStudentRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmStudentResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmStudentResult.Designer.cs">
+      <DependentUpon>FrmStudentResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmWaver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmWaver.Designer.cs">
+      <DependentUpon>FrmWaver.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\FRMLOGIN.resx">
+      <DependentUpon>FRMLOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmStudentAdmission.resx">
+      <DependentUpon>FrmStudentAdmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmStudentEnrolment.resx">
+      <DependentUpon>FrmStudentEnrolment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmStudentInformation.resx">
+      <DependentUpon>FrmStudentInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmStudentRegistration.resx">
+      <DependentUpon>FrmStudentRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmStudentResult.resx">
+      <DependentUpon>FrmStudentResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmWaver.resx">
+      <DependentUpon>FrmWaver.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erd.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
